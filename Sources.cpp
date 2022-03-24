@@ -17,15 +17,15 @@ void InitList(LinkedList *L){
 Status buildList(LinkedList *L,int num) {
 	
 	int i;
-	int j; 
+//	int j; 
 	LinkedList p,r;
 	r=*L;//r为尾部指针 
 	for (i=1;i<=num;i++){
 		p=(LinkedList)malloc(sizeof(LNode));
 		//p为新结点指针 
 		printf("请输入第%d个数据:\n",i) ;
-		scanf("%d",&j );
-		p->data=j;
+		scanf("%d",&(p->data) );
+	//	p->data=j;&j
 		r->next =p;
 		r=p;		
 	
@@ -38,7 +38,7 @@ Status InsertList(int num, LinkedList L){
 	LinkedList p,q;
 	p=L;
 	int i;
-	int j;
+//	int j;
 		
 	for (i=0;i<num;i++){
 		p=p->next ;//找到插入的结点 
@@ -49,8 +49,8 @@ Status InsertList(int num, LinkedList L){
 	}
 	q=(LinkedList)malloc(sizeof(LNode));//q为新节点指针 
 	printf("请输入要插入的数：\n");
-	scanf("%d",&j );
-	q->data =j;
+	scanf("%d",&(q->data) );
+//	q->data =j;
 	q->next =p->next ;
 	p->next =q;
 	
